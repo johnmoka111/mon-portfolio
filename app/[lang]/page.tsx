@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
 import Leadership from "@/components/Leadership";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
@@ -29,6 +30,7 @@ export default function HomePage({ params: { lang } }: HomePageProps) {
         <Hero />
         <About />
         <Skills />
+        <Projects />
         <Leadership />
         <Gallery />
         <Contact />

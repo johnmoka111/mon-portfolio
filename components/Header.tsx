@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Sun, Moon, Compass, Code2, Users, Image as ImageIcon, Mail } from "lucide-react";
+import { Sun, Moon, Compass, Code2, Users, Image as ImageIcon, Mail, FolderGit2 } from "lucide-react";
 
 interface HeaderProps {
   currentLocale: string;
@@ -31,7 +31,7 @@ export default function Header({ currentLocale }: HeaderProps) {
       setScrolled(window.scrollY > 20);
 
       // Track active section via scroll position
-      const sections = ["about", "skills", "leadership", "gallery", "contact"];
+      const sections = ["about", "skills", "projects", "leadership", "gallery", "contact"];
       for (const sec of [...sections].reverse()) {
         const el = document.getElementById(sec);
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -95,6 +95,7 @@ export default function Header({ currentLocale }: HeaderProps) {
   const navItems = [
     { key: "about",      href: "#about",      Icon: Compass  },
     { key: "skills",     href: "#skills",     Icon: Code2    },
+    { key: "projects",   href: "#projects",   Icon: FolderGit2 },
     { key: "leadership", href: "#leadership", Icon: Users    },
     { key: "gallery",    href: "#gallery",    Icon: ImageIcon },
     { key: "contact",    href: "#contact",    Icon: Mail     },
