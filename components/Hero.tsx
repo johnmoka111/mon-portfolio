@@ -56,7 +56,7 @@ export default function Hero() {
               className="inline-flex items-center space-x-2 bg-kivuBlue/10 dark:bg-kivuBlue/25 border border-kivuBlue/25 px-4 py-1.5 rounded-full text-xs font-semibold text-kivuBlue dark:text-blue-300 w-fit mx-auto lg:mx-0 shadow-sm"
             >
               <Terminal className="h-4 w-4 text-kivuBlue" />
-              <span>Full-Stack & Clean Architecture</span>
+              <span>UI/UX Designer &amp; Co-fondateur</span>
             </motion.div>
 
             {/* Name */}

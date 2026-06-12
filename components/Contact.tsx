@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -20,10 +20,65 @@ import {
 
 export default function Contact() {
   const t = useTranslations("contact");
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const locale = useLocale();
+
+  const interestOptions = {
+    fr: {
+      label: "Quel projet ou service vous intéresse ?",
+      placeholderSelect: "Sélectionnez un domaine...",
+      specifyPlaceholder: "Veuillez préciser votre besoin...",
+      options: [
+        { value: "creation_web", label: "Création de site web" },
+        { value: "app_gestion", label: "Développement d'application de gestion" },
+        { value: "app_mobile", label: "Application mobile" },
+        { value: "maintenance", label: "Maintenance" },
+        { value: "decodage", label: "Décodage smartphone" },
+        { value: "installation", label: "Installation système" },
+        { value: "autre", label: "Autre (à préciser)" }
+      ]
+    },
+    en: {
+      label: "What project or service are you interested in?",
+      placeholderSelect: "Select an option...",
+      specifyPlaceholder: "Please specify your need...",
+      options: [
+        { value: "creation_web", label: "Website creation" },
+        { value: "app_gestion", label: "Management app development" },
+        { value: "app_mobile", label: "Mobile app" },
+        { value: "maintenance", label: "Maintenance" },
+        { value: "decodage", label: "Smartphone decoding" },
+        { value: "installation", label: "System installation" },
+        { value: "autre", label: "Other (please specify)" }
+      ]
+    },
+    sw: {
+      label: "Je, ni mradi au huduma gani unayopendelea?",
+      placeholderSelect: "Chagua chaguo...",
+      specifyPlaceholder: "Tafadhali fafanua mahitaji yako...",
+      options: [
+        { value: "creation_web", label: "Uundaji wa tovuti" },
+        { value: "app_gestion", label: "Uundaji wa programu ya usimamizi" },
+        { value: "app_mobile", label: "Programu ya simu" },
+        { value: "maintenance", label: "Matengenezo" },
+        { value: "decodage", label: "Kufungua simu (decoding)" },
+        { value: "installation", label: "Ufungaji wa mfumo" },
+        { value: "autre", label: "Nyingine (fafanua)" }
+      ]
+    }
+  };
+
+  const activeIntProps = interestOptions[locale as "fr" | "en" | "sw"] || interestOptions.fr;
+
+  const [formData, setFormData] = useState({ 
+    name: "", 
+    email: "", 
+    interest: "",
+    customInterest: "",
+    message: "" 
+  });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -44,13 +99,14 @@ export default function Contact() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
+          interest: formData.interest === "autre" ? `Autre: ${formData.customInterest}` : formData.interest,
           message: formData.message,
         }),
       });
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", interest: "", customInterest: "", message: "" });
       } else {
         setStatus("error");
       }
@@ -200,11 +256,18 @@ export default function Contact() {
                     <h4 className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
                       {t("info.whatsappTitle")}
                     </h4>
-                    <p className="mt-1 text-base font-semibold text-gray-800 dark:text-gray-200">
-                      <a href="https://wa.me/243981430687" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-green-500 transition-colors">
-                        +243 981 430 687
-                      </a>
-                    </p>
+                    <div className="mt-1 space-y-1">
+                      <p className="text-base font-semibold text-gray-800 dark:text-gray-200">
+                        <a href="https://wa.me/243981430687" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-green-500 transition-colors">
+                          +243 981 430 687
+                        </a>
+                      </p>
+                      <p className="text-base font-semibold text-gray-800 dark:text-gray-200">
+                        <a href="https://wa.me/243999164465" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-green-500 transition-colors">
+                          +243 999 164 465
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -294,6 +357,51 @@ export default function Contact() {
                   placeholder="johnmoka@example.com"
                 />
               </div>
+
+              {/* Interest / Project Domain */}
+              <div className="space-y-2">
+                <label htmlFor="interest" className="text-sm font-bold text-gray-700 dark:text-gray-300">
+                  {activeIntProps.label}
+                </label>
+                <select
+                  id="interest"
+                  name="interest"
+                  required
+                  value={formData.interest}
+                  onChange={handleChange}
+                  disabled={status === "loading"}
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-slate-950 border border-gray-250 dark:border-slate-850 rounded-xl text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-kivuBlue dark:focus:ring-kivuBlue disabled:opacity-50 transition-all cursor-pointer"
+                >
+                  <option value="" disabled hidden>
+                    {activeIntProps.placeholderSelect}
+                  </option>
+                  {activeIntProps.options.map((opt) => (
+                    <option key={opt.value} value={opt.value} className="bg-white dark:bg-slate-900 text-gray-900 dark:text-white">
+                      {opt.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Specify Custom Interest */}
+              {formData.interest === "autre" && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  className="space-y-2 overflow-hidden"
+                >
+                  <input
+                    type="text"
+                    name="customInterest"
+                    required
+                    value={formData.customInterest}
+                    onChange={handleChange}
+                    disabled={status === "loading"}
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-slate-950 border border-gray-250 dark:border-slate-850 rounded-xl text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-kivuBlue dark:focus:ring-kivuBlue disabled:opacity-50 transition-all"
+                    placeholder={activeIntProps.specifyPlaceholder}
+                  />
+                </motion.div>
+              )}
 
               {/* Message */}
               <div className="space-y-2">

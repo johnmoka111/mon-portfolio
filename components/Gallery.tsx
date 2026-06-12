@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
 
 interface GalleryImage {
   src: string;
@@ -14,6 +14,7 @@ export default function Gallery() {
   const t = useTranslations("gallery");
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   const images: GalleryImage[] = [
     { src: "/working.jpg", key: "working" },
@@ -99,7 +100,10 @@ export default function Gallery() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch max-w-6xl mx-auto">
           
           {/* Left Panel: Large Image Frame */}
-          <div className="lg:col-span-7 relative overflow-hidden aspect-video lg:aspect-auto lg:h-[480px] w-full rounded-2xl bg-slate-950 border border-gray-200 dark:border-slate-800 shadow-md flex items-center justify-center">
+          <div 
+            onClick={() => setIsLightboxOpen(true)}
+            className="lg:col-span-7 relative overflow-hidden aspect-video lg:aspect-auto lg:h-[480px] w-full rounded-2xl bg-slate-950 border border-gray-200 dark:border-slate-800 shadow-md flex items-center justify-center cursor-zoom-in group"
+          >
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.img
                 key={activeIndex}
@@ -114,8 +118,15 @@ export default function Gallery() {
               />
             </AnimatePresence>
             
+            {/* Hover expand overlay */}
+            <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
+              <span className="p-3 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full scale-90 group-hover:scale-100 transition-all duration-300">
+                <Maximize2 className="h-6 w-6" />
+              </span>
+            </div>
+            
             {/* Absolute badge for index count */}
-            <div className="absolute top-4 right-4 px-3.5 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-[10px] font-black tracking-widest text-white select-none">
+            <div className="absolute top-4 right-4 px-3.5 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-[10px] font-black tracking-widest text-white select-none z-20">
               {String(activeIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
             </div>
           </div>
@@ -213,6 +224,60 @@ export default function Gallery() {
         </div>
 
       </div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsLightboxOpen(false)}
+            className="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-sm flex flex-col items-center justify-center p-4 md:p-8 cursor-zoom-out"
+          >
+            {/* Close Button */}
+            <button 
+              onClick={() => setIsLightboxOpen(false)}
+              className="absolute top-6 right-6 p-3 bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-full transition-colors duration-200 z-[110]"
+              aria-label="Close viewer"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            {/* Main Lightbox Image */}
+            <motion.div
+              initial={{ scale: 0.95, y: 15 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 15 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="relative max-w-5xl max-h-[85vh] w-full h-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={images[activeIndex].src}
+                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl border border-white/10 select-none"
+                alt={t(`items.${images[activeIndex].key}.title`)}
+              />
+            </motion.div>
+
+            {/* Caption in Lightbox */}
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="mt-6 text-center max-w-2xl px-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <h3 className="text-xl font-bold text-white mb-2">
+                {t(`items.${images[activeIndex].key}.title`)}
+              </h3>
+              <p className="text-sm text-gray-400">
+                {t(`items.${images[activeIndex].key}.desc`)}
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
