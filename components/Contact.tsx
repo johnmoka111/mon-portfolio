@@ -18,11 +18,10 @@ import {
   AlertCircle
 } from "lucide-react";
 
-// EmailJS configuration variables. Replace YOUR_TEMPLATE_ID and YOUR_PUBLIC_KEY
-// with the credentials from your EmailJS account dashboard.
+// EmailJS configuration variables.
 const EMAILJS_SERVICE_ID = "service_b5phvab";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // e.g. template_xxxxxxx
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";   // e.g. user_xxxxxxxxxxxx or public key
+const EMAILJS_TEMPLATE_ID = "template_h5pudy8";
+const EMAILJS_PUBLIC_KEY = "tqhT_Ras5DNMGgHAd";
 
 export default function Contact() {
   const t = useTranslations("contact");
