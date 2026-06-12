@@ -18,6 +18,12 @@ import {
   AlertCircle
 } from "lucide-react";
 
+// EmailJS configuration variables. Replace YOUR_TEMPLATE_ID and YOUR_PUBLIC_KEY
+// with the credentials from your EmailJS account dashboard.
+const EMAILJS_SERVICE_ID = "service_b5phvab";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // e.g. template_xxxxxxx
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";   // e.g. user_xxxxxxxxxxxx or public key
+
 export default function Contact() {
   const t = useTranslations("contact");
   const locale = useLocale();
@@ -88,29 +94,34 @@ export default function Contact() {
     setStatus("loading");
 
     try {
-      // Formspree submission (using John Moka's professional email route or default placeholder)
-      // Users can swap 'xkdnyyvq' with their actual Formspree form ID
-      const response = await fetch("https://formspree.io/f/xkdnyyvq", {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          interest: formData.interest === "autre" ? `Autre: ${formData.customInterest}` : formData.interest,
-          message: formData.message,
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            from_name: formData.name,
+            from_email: formData.email,
+            interest: formData.interest === "autre" ? `Autre: ${formData.customInterest}` : formData.interest,
+            message: formData.message,
+          },
         }),
       });
 
-      if (response.ok) {
+      if (response.ok || response.status === 200) {
         setStatus("success");
         setFormData({ name: "", email: "", interest: "", customInterest: "", message: "" });
       } else {
+        const errText = await response.text();
+        console.error("EmailJS submit error:", errText);
         setStatus("error");
       }
-    } catch {
+    } catch (error) {
+      console.error("EmailJS connection error:", error);
       setStatus("error");
     }
   };
