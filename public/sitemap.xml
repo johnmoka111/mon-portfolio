@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- French Homepage -->
+  <url>
+    <loc>https://john-moka-portfolio.web.app/fr</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://john-moka-portfolio.web.app/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://john-moka-portfolio.web.app/en" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://john-moka-portfolio.web.app/sw" />
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- English Homepage -->
+  <url>
+    <loc>https://john-moka-portfolio.web.app/en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://john-moka-portfolio.web.app/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://john-moka-portfolio.web.app/en" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://john-moka-portfolio.web.app/sw" />
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Swahili Homepage -->
+  <url>
+    <loc>https://john-moka-portfolio.web.app/sw</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://john-moka-portfolio.web.app/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://john-moka-portfolio.web.app/en" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://john-moka-portfolio.web.app/sw" />
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- French Privacy Policy -->
+  <url>
+    <loc>https://john-moka-portfolio.web.app/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://john-moka-portfolio.web.app/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://john-moka-portfolio.web.app/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://john-moka-portfolio.web.app/sw/privacy" />
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- English Privacy Policy -->
+  <url>
+    <loc>https://john-moka-portfolio.web.app/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://john-moka-portfolio.web.app/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://john-moka-portfolio.web.app/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://john-moka-portfolio.web.app/sw/privacy" />
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Swahili Privacy Policy -->
+  <url>
+    <loc>https://john-moka-portfolio.web.app/sw/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://john-moka-portfolio.web.app/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://john-moka-portfolio.web.app/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="sw" href="https://john-moka-portfolio.web.app/sw/privacy" />
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

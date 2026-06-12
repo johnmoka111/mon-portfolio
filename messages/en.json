@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "about": "Journey",
+    "skills": "Skills",
+    "leadership": "Leadership",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hello, I am",
+    "fullName": "John Moka",
+    "subtitle": "Full-Stack Developer | UI/UX Designer | Software Architecture & Clean Architecture Specialist | Co-founder of TAL Communities",
+    "ctaAbout": "My Journey",
+    "ctaContact": "Contact Me"
+  },
+  "about": {
+    "title": "My Journey",
+    "subtitle": "Discover the key milestones that shaped my passion for technology and entrepreneurship.",
+    "history": "Journey",
+    "historyTitle": "Milestones & Progress",
+    "historyDesc": "A clear vision, strong foundational principles, and ongoing dedication to technological innovation and community leadership in Bukavu.",
+    "events": {
+      "2003": {
+        "title": "Birth in Bagira",
+        "description": "Born in Bagira, Bukavu, Democratic Republic of the Congo. From an early age, I was fascinated by science and the potential for social transformation."
+      },
+      "2019_2022": {
+        "title": "State Diploma in Secretarial Studies and Administration",
+        "description": "Obtained my State Diploma in Secretarial Studies and Administration at Institut Bora Bagira, developing solid organizational and administrative skills."
+      },
+      "2022_2023": {
+        "title": "Strategic Pivot to Tech",
+        "description": "Made a major decision to pivot towards computer science and management, starting my degree in Business Languages and Informatics (LIAC) at UOB and business management informatics at ISC Bukavu."
+      },
+      "2023_immersion": {
+        "title": "Intensive Immersion",
+        "description": "Deep and intensive learning of modern web technologies: React, Next.js, and Tailwind CSS to design outstanding user interfaces."
+      },
+      "2023_community": {
+        "title": "Community Leadership (GDSC UOB)",
+        "description": "Co-founded the Google Developer Student Club (GDSC UOB) and actively participated in DevFest Kivu to boost the local tech ecosystem."
+      },
+      "2024": {
+        "title": "Founding TAL Communities",
+        "description": "Co-founder and CEO of TAL Communities (Tech, Art, and Languages Communities - TAL Hub), driving the digital transformation of local structures."
+      },
+      "2025_2026": {
+        "title": "Consolidation & Clean Architecture",
+        "description": "Strengthening my skills in cross-platform mobile development (Flutter/Dart), back-end engineering (Django), and advanced Clean Architecture principles."
+      }
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "I am proficient in a set of modern technologies covering mobile, web back-end, and front-end development, as well as UI/UX design. Each tool is carefully selected to meet the real needs of the projects I design.",
+    "subtitleTwo": "From Flutter to Django, Laravel and Jaspr, I constantly explore new horizons to deliver complete, performant, and aesthetically refined solutions — from prototype to deployment.",
+    "groupMobile": "Mobile",
+    "groupWeb": "Web & Back-end",
+    "groupTools": "Design & Tools",
+    "list": {
+      "flutter": "Flutter",
+      "dart": "Dart",
+      "react": "React / Next.js",
+      "django": "Django (Python)",
+      "laravel": "Laravel (PHP)",
+      "jaspr": "Jaspr (Dart Web)",
+      "figma": "Figma",
+      "xd": "Adobe XD"
+    }
+  },
+  "leadership": {
+    "title": "Leadership & Impact",
+    "subtitle": "Active engagement in social entrepreneurship and community development in Bukavu.",
+    "cards": {
+      "tal": {
+        "role": "CEO & Co-founder",
+        "org": "TAL Communities",
+        "desc": "Design and deployment of advanced web and mobile applications, and organizing practical AI training sessions for young tech talents."
+      },
+      "gdsc": {
+        "role": "Co-founder & Mentor",
+        "org": "GDSC UOB",
+        "desc": "Trained over 50 developers through hands-on workshops on Google technologies and web development, powering the local tech community."
+      },
+      "innovate": {
+        "role": "Lead Organizer",
+        "org": "Web & Design Innovate",
+        "desc": "Planning and directing the tech innovation hackathon in Bukavu, gathering top designers and developers to solve local challenges."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Have a project in mind? Looking for a collaboration opportunity? Send me a message!",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email Address",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred while sending your message."
+    },
+    "info": {
+      "addressTitle": "Location",
+      "addressValue": "Bukavu, South-Kivu, DR Congo",
+      "emailTitle": "Professional Email",
+      "whatsappTitle": "WhatsApp"
+    }
+  },
+  "footer": {
+    "rights": "© 2025 John Moka. All rights reserved.",
+    "designedBy": "Designed with passion by John Moka"
+  },
+  "gallery": {
+    "title": "Visual Showcase",
+    "subtitle": "A glimpse of my workspace, creative designs, and leisure moments.",
+    "items": {
+      "working": {
+        "title": "Work Session",
+        "desc": "An intense work session at TAL Communities, focusing on mobile and web applications development. This constant focus enables the creation of robust architectures and solves the hub's most complex technical challenges."
+      },
+      "serviceDesign": {
+        "title": "Experience Design",
+        "desc": "Service design and user experience are at the core of my creative workflow. I design interactive wireframes and seamless user flows to make technology intuitive and accessible for all users."
+      },
+      "talLogo": {
+        "title": "TAL Communities Logo",
+        "desc": "The official visual identity of our tech innovation hub and learning platform, TAL Communities. This logo embodies the vision of merging technology, art, and languages to empower the next generation of African creators in Bukavu."
+      },
+      "conception": {
+        "title": "Graphic Design",
+        "desc": "Creating impactful visuals, including birthday posters, events, and other communication materials. This work combines modern aesthetics with clear messaging to capture the audience's attention."
+      },
+      "portrait": {
+        "title": "Official Portrait",
+        "desc": "Official portrait of John Moka, co-founder of TAL Communities and passionate developer. This photo represents my commitment to inspiring and mentoring the youth of Bukavu in tech and digital skills."
+      },
+      "relax": {
+        "title": "Leisure Moments",
+        "desc": "Moments of rest and relaxation are essential to maintain a healthy work-life balance. Stepping back and recharging in nature or with friends continually stimulates creativity and mental clarity."
+      }
+    }
+  }
+}

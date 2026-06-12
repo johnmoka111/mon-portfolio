@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Moka | Offline</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #111827;
+      color: #F3F4F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .container {
+      max-width: 500px;
+      padding: 40px;
+      background-color: #1F2937;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .icon {
+      font-size: 64px;
+      margin-bottom: 24px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 16px 0;
+      background: linear-gradient(to right, #60A5FA, #10B981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      color: #9CA3AF;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0 0 24px 0;
+    }
+    .languages {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      text-align: left;
+    }
+    .lang-group {
+      margin-bottom: 12px;
+    }
+    .lang-title {
+      font-weight: bold;
+      color: #10B981;
+    }
+    button {
+      background: linear-gradient(to right, #1E3A8A, #3b82f6);
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(30, 58, 138, 0.4);
+    }
+    button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.6);
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🔌</div>
+    <h1>John Moka Portfolio</h1>
+    
+    <div class="languages">
+      <div class="lang-group">
+        <span class="lang-title">FR:</span> Vous êtes hors ligne. Veuillez vérifier votre connexion et rafraîchir la page.
+      </div>
+      <div class="lang-group">
+        <span class="lang-title">EN:</span> You are offline. Please check your network connection and reload.
+      </div>
+      <div class="lang-group">
+        <span class="lang-title">SW:</span> Uko nje ya mtandao. Tafadhali angalia mtandao wako na upakie upya.
+      </div>
+    </div>
+
+    <button onclick="window.location.reload()">Réessayer / Retry / Jaribu Tena</button>
+  </div>
+</body>
+</html>

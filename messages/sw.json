@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "about": "Safari Yangu",
+    "skills": "Ujuzi",
+    "leadership": "Uongozi",
+    "gallery": "Picha",
+    "contact": "Mawasiliano"
+  },
+  "hero": {
+    "title": "Jambo, mimi ni",
+    "fullName": "John Moka",
+    "subtitle": "Mundimi wa Programu (Full-Stack) | Mbunifu wa UI/UX | Mtaalamu wa Muundo wa Programu na Clean Architecture | Mwanzilishi Mwenza wa TAL Communities",
+    "ctaAbout": "Safari Yangu",
+    "ctaContact": "Wasiliana Nami"
+  },
+  "about": {
+    "title": "Safari Yangu",
+    "subtitle": "Gundua hatua kuu zilizounda mapenzi yangu kwa teknolojia na ujasiriamali.",
+    "history": "Safari",
+    "historyTitle": "Hatua na Maendeleo",
+    "historyDesc": "Maono wazi, kanuni thabiti, na kujitolea kuendelea kwa uvumbuzi wa kiteknolojia na uongozi wa jamii huko Bukavu.",
+    "events": {
+      "2003": {
+        "title": "Kuzaliwa Bagira",
+        "description": "Alizaliwa Bagira, Bukavu, katika Jamhuri ya Kidemokrasia ya Kongo. Tangu utotoni, nilivutiwa na sayansi na uwezo wa mabadiliko ya kijamii."
+      },
+      "2019_2022": {
+        "title": "Diplome d'Etat ya Uhazili na Utawala",
+        "description": "Kupata Diplome d'Etat yangu katika Uhazili na Utawala kwenye Taasisi ya Bora Bagira, nikijenga ujuzi madhubuti wa mipango na usimamizi wa kiofisi."
+      },
+      "2022_2023": {
+        "title": "Mageuko ya Kimkakati kuelekea Teknolojia",
+        "description": "Uamuzi mkubwa wa kuelekea kwenye uhandisi wa programu na usimamizi, nikianza masomo yangu ya LIAC katika Chuo Kikuu cha Serikali cha Bukavu (UOB) na usimamizi wa biashara na teknolojia katika ISC Bukavu."
+      },
+      "2023_immersion": {
+        "title": "Kujifunza kwa Kina",
+        "description": "Kujifunza kwa kina na kwa kasi teknolojia za kisasa za wavuti: React, Next.js, na Tailwind CSS ili kubuni violesura vya kipekee vya watumiaji."
+      },
+      "2023_community": {
+        "title": "Uongozi wa Kijamii (GDSC UOB)",
+        "description": "Kuanzisha Google Developer Student Club (GDSC UOB) kama mwanzilishi mwenza na kushiriki kikamilifu katika DevFest Kivu ili kuimarisha mfumo wa teknolojia wa eneo letu."
+      },
+      "2024": {
+        "title": "Kuanzishwa kwa TAL Communities",
+        "description": "Mwanzilishi mwenza na Mkurugenzi Mkuu (CEO) wa TAL Communities (Tech, Art, and Languages Communities - TAL Hub), akiongoza mabadiliko ya kidijitali ya mashirika ya eneo hilo."
+      },
+      "2025_2026": {
+        "title": "Kuimarisha Ujuzi na Clean Architecture",
+        "description": "Kuimarisha ujuzi wa juu katika maendeleo ya programu za simu za mkononi (Flutter/Dart), mifumo ya nyuma (Django), na kanuni za Clean Architecture."
+      }
+    }
+  },
+  "skills": {
+    "title": "Ujuzi Wangu",
+    "subtitle": "Ninatumia teknolojia za kisasa zinazoshughulikia maendeleo ya simu, tovuti ya nyuma na mbele, pamoja na muundo wa UI/UX. Kila chombo kimechaguliwa kwa uangalifu kukidhi mahitaji halisi ya miradi ninayounda.",
+    "subtitleTwo": "Kuanzia Flutter hadi Django, Laravel na Jaspr, ninaendelea kuchunguza maeneo mapya ili kutoa suluhisho kamili, bora na zuri kimacho — kutoka kwa mfano hadi uwekaji.",
+    "groupMobile": "Simu",
+    "groupWeb": "Tovuti & Nyuma",
+    "groupTools": "Muundo & Zana",
+    "list": {
+      "flutter": "Flutter",
+      "dart": "Dart",
+      "react": "React / Next.js",
+      "django": "Django (Python)",
+      "laravel": "Laravel (PHP)",
+      "jaspr": "Jaspr (Dart Web)",
+      "figma": "Figma",
+      "xd": "Adobe XD"
+    }
+  },
+  "leadership": {
+    "title": "Uongozi na Athari",
+    "subtitle": "Ushiriki mkamilifu katika ujasiriamali wa kijamii na maendeleo ya jamii mjini Bukavu.",
+    "cards": {
+      "tal": {
+        "role": "Mkurugenzi Mkuu na Mwanzilishi Mwenza",
+        "org": "TAL Communities",
+        "desc": "Kubuni na kusambaza programu za kisasa za wavuti na simu, na kuandaa mafunzo ya vitendo ya Akili Mnemba (AI) kwa vijana wenye vipaji vya teknolojia."
+      },
+      "gdsc": {
+        "role": "Mwanzilishi Mwenza na Mshauri",
+        "org": "GDSC UOB",
+        "desc": "Kufundisha zaidi ya watengenezaji programu 50 kupitia warsha za vitendo kuhusu teknolojia za Google na utengenezaji wa wavuti, tukichochea jamii ya teknolojia ya ndani."
+      },
+      "innovate": {
+        "role": "Mratibu Mkuu",
+        "org": "Web & Design Innovate",
+        "desc": "Kupanga na kuongoza mashindano ya hackathon ya uvumbuzi wa teknolojia huko Bukavu, likikutanisha wabunifu na watengenezaji programu bora ili kutatua changamoto za kijamii."
+      }
+    }
+  },
+  "contact": {
+    "title": "Wasiliana Nami",
+    "subtitle": "Je, una mradi akilini? Unatafuta fursa ya kushirikiana? Nitumie ujumbe!",
+    "form": {
+      "name": "Jina Lako",
+      "email": "Barua Pepe Yako",
+      "message": "Ujumbe Wako",
+      "send": "Tuma Ujumbe",
+      "sending": "Inatuma...",
+      "success": "Ujumbe wako umetumwa kwa mafanikio!",
+      "error": "Hitilafu imetokea wakati wa kutuma ujumbe wako."
+    },
+    "info": {
+      "addressTitle": "Mahali",
+      "addressValue": "Bukavu, Kivu Kusini, Jamhuri ya Kidemokrasia ya Kongo",
+      "emailTitle": "Barua Pepe ya Kazi",
+      "whatsappTitle": "WhatsApp"
+    }
+  },
+  "footer": {
+    "rights": "© 2025 John Moka. Haki zote zimehifadhiwa.",
+    "designedBy": "Imeundwa kwa upendo na John Moka"
+  },
+  "gallery": {
+    "title": "Muhtasari wa Picha",
+    "subtitle": "Picha za eneo langu la kazi, ubunifu, na wakati wa kupumzika.",
+    "items": {
+      "working": {
+        "title": "Kipindi cha Kazi",
+        "desc": "Kipindi cha kazi makini katika TAL Communities, nikilenga utayarishaji wa mifumo ya simu na tovuti. Umakini huu unaruhusu kubuni miundo thabiti na kutatua changamoto ngumu za kiteknolojia."
+      },
+      "serviceDesign": {
+        "title": "Ubunifu wa Huduma",
+        "desc": "Ubunifu wa huduma na uzoefu wa mtumiaji ndio msingi wa kazi yangu ya ubunifu. Ninaunda mifano ya skrini na mtiririko rahisi ili kufanya teknolojia iwe rahisi na inayofikika kwa watumiaji wote."
+      },
+      "talLogo": {
+        "title": "Nembo ya TAL Communities",
+        "desc": "Nembo rasmi ya kituo chetu cha uvumbuzi wa kiteknolojia na jukwaa la mafunzo, TAL Communities. Nembo hii inawakilisha maono ya kuunganisha teknolojia, sanaa na lugha ili kuwawezesha wabunifu wa Kiafrika wa kizazi kijacho huko Bukavu."
+      },
+      "conception": {
+        "title": "Ubunifu wa Michoro",
+        "desc": "Kuunda picha zenye matokeo, ikiwa ni pamoja na mabango ya siku ya kuzaliwa, matukio, na vifaa vingine vya mawasiliano. Kazi hii inachanganya urembo wa kisasa na ujumbe wazi ili kuvutia watazamaji."
+      },
+      "portrait": {
+        "title": "Picha Rasmi",
+        "desc": "Picha rasmi ya John Moka, mwanzilishi mwenza wa TAL Communities na msanidi programu mwenye shauku. Picha hii inawakilisha kujitolea kwangu kuhamasisha na kuongoza vijana wa Bukavu katika ujuzi wa kiteknolojia na kidijitali."
+      },
+      "relax": {
+        "title": "Wakati wa Kupumzika",
+        "desc": "Wakati wa kupumzika na kuburudika ni muhimu ili kudumisha usawa mzuri wa maisha na kazi. Kurudi nyuma na kujaza nguvu katika mazingira ya asili au na marafiki huamsha ubunifu na uwazi wa kiakili."
+      }
+    }
+  }
+}
